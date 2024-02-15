@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+      <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+
+    <meta name="theme-color" content="#66cd2e"/>
+	<!-- BOOTSTRAP STYLES-->
+    <link href="bootstrap.css" rel="stylesheet" />
+     <!-- FONTAWESOME STYLES-->
+    <link href="font-awesome.css" rel="stylesheet" />
+        <!-- CUSTOM STYLES-->
+    <link href="custom.css" rel="stylesheet" />
+     <!-- GOOGLE FONTS-->
+   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+</head>
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><small>Code Zack</small></a>  
+            </div>
+  <div id="currentDateTime" style="color: white;
+padding: 15px 50px 5px 50px;
+float: right;
+font-size: 16px;"> 10:53 pm 15/02/2024 &nbsp; <a href="../" class="btn btn-primary square-btn-adjust"><i class="fa fa-home"></i></a> </div>
+        </nav>   
+           <!-- /. NAV TOP  -->
+                <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+				<li class="text-center">
+                    <img src="https://yt3.ggpht.com/QnR6apNptjfsica8DNvb0mazAPXkNml4NOj6HDek7DMaenlwCrhcp9FNV8hQGShgqPzfYLSMzw=s176-c-k-c0x00ffffff-no-rj-mo" class="user-image img-responsive"/>
+					</li>
+				
+					
+                    
+                     
+                
+                 
+                <li>
+                    <a href="../" ><i class="fa-3x fa fa-home"></i> Home</a>
+                </li>
+                
+              
+                <li>
+                    <a href="login" ><i class="fa-3x fa fa-key"></i> login</a>
+                </li>
+                <li>
+                    <a href="signup" ><i class="fa-3x fa fa-user"></i> Sign Up</a>
+                </li>
+
+                  
+                </ul>
+               
+            </div>
+            
+        </nav>  
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper" >
+            <div id="page-inner">
+                <div class="row">
+                    <div class="col-md-12" style="text-align: center;">
+                     <h2>Sign Up</h2>   
+                       				
+					<h5 style="color:orange">Invitation Code is invalid</h5> 
+			
+			                       
+                    </div>
+                </div>
+                 <!-- /. ROW  -->
+                 <hr />
+               <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <!-- Form Elements -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Enter details to create your account
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    
+                                    <form role="form" method="POST">
+                                       <div class="form-group text-white">
+							<label style="float:right;color:green;"></label>
+							<label>Inviter</label>
+							<input onchange="form.submit()" type="text" name="inviter" value=""  class="form-control faded">
+						</div>
+						<div class="form-group text-white">
+						
+							<label>Name</label>
+							<BR>
+							<select name="title" class="form-control faded" style="max-width:23%;float:left;">
+								<option  value="Mr.">Mr.</option>
+								<option  value="Miss.">Miss.</option>
+								<option  value="Mrs.">Mrs.</option>
+							</select>
+							<input style="max-width:76%;" type="text" name="name" value="" class="form-control faded">
+						</div>
+						<div class="form-group text-white">
+							<label>Phone</label>
+							<input type="number" name="phone" value="" class="form-control faded">
+						</div>
+						<div class="form-group text-white">
+							<label>Email address</label>
+							<input type="email" name="email" value=""  class="form-control faded">
+						</div>
+						<div class="form-group text-white">
+							<label>Password</label>
+							<input type="password" id="myInput" name="password" value="" class="form-control faded">
+						</div>
+						<div class="custom-control text-white custom-checkbox">
+							<input type="checkbox" onclick="myFunction()" class="custom-control-input" id="customCheck1" >
+							<label class="custom-control-label" onclick="myFunction()" for="customCheck1">
+								Show Password
+							</label>
+<script>		
+	function myFunction() {
+	  var x = document.getElementById("myInput");
+	  if (x.type === "password") {
+		x.type = "text";
+	  } else {
+		x.type = "password";
+	  }
+	}
+</script>
+<script>
+    // Function to get the current date and time
+    function getCurrentDateTime() {
+        var currentDate = new Date();
+        var dateStr =
+            currentDate.getDate() + "/" + (currentDate.getMonth() + 1) + "/" + currentDate.getFullYear();
+        var timeStr =
+            currentDate.getHours() + ":" + currentDate.getMinutes() + ":" + currentDate.getSeconds();
+        return dateStr + " " + timeStr;
+    }
+
+    // Update the content of the element with id 'currentDateTime' every second
+    setInterval(function() {
+        document.getElementById('currentDateTime').innerText = getCurrentDateTime();
+    }, 1000);
+</script>
+						</div>
+						<br>
+						<div>
+							<input type="checkbox" checked required name="accept"> I accpet <a style="text-decoration:none;" href="../terms-and-conditions" target="blank"> terms & Conditions</a>
+							<BR><BR>
+							<button type="submit" name="signup" value="Register"  class="btn btn-success btn-block col">Sign up</button>
+						
+
+                                    </form>
+                                    <br />
+                                      
+                                      <a style="text-decoration:none;" href="login">Already have an Account? Login</a>
+                                  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- End Form Elements -->
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+                
+    </div>
+           
+            </div>
+   
+        </div>
+   
+   
+</body>
+</html>
